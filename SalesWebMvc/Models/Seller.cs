@@ -38,6 +38,7 @@ namespace SalesWebMvc.Models
             Sales.Remove(sr);
         }
 
+        // Consulta a soma total das vendas de cada vendedor no banco
         public double TotalSales(DateTime initial, DateTime final)
         {
             return Sales.Where(sr => sr.Date >= initial && sr.Date <= final).Sum(sr => sr.Amount);
